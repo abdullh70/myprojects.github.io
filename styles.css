@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 400;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right, #493323 0, #493323 10%, #ffdf91 60%);
+  display: flex;
+  width: 100%;
+  height: 120px;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 3px solid rgba(255, 255, 0, 0.388);
+}
+#navbar ul {
+  display: flex;
+  gap: .4vw;
+  justify-content: right;
+  align-items: center;
+}
+#navbar ul li {
+  display: inline-block;
+  flex:1;
+  white-space: nowrap;
+  font-size:2.3vw;;
+  padding:0;
+}
+#navbar ul li a {
+  color: rgba(0, 0, 0, 0.801);
+  text-decoration: none;
+  padding: 7px 30px;
+  transition: all 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+  border-radius: 7px;
+  background-color: #b3551e90;
+}
+.nav-margin-right {
+  margin-right: 2vw;
+}
+#navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.249);
+  color: black;
+  padding: calc(7px + 10px) calc(10px + 30px);
+}
+
+#navbar ul li a:active {
+  opacity: 0.7;
+}
+#empty-space1-welcome-section {
+  height: 123px;
+}
+#welcome-section {
+  text-align: center;
+  background-color: #362214;
+  height: 960px;
+  color: #ffffff;
+}
+.title-name {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-size: 5rem;
+  padding-top: 300px;
+}
+
+#welcome-section p {
+  font-size: 1.8rem;
+}
+
+#empty-space1-projects-section {
+  height: 123px;
+  background: linear-gradient(#362214, #91684ac9);
+}
+#projects {
+  background-color: #91684ac9;
+  padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2%;
+}
+#projects h1 {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 70px;
+}
+.grid-container {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  grid-template-rows: repeat(3, 500px);
+  text-align: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.grid {
+  background-color: #0000003f;
+}
+#profile-link {
+  text-decoration: none;
+}
+.project-tile {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 2.2rem;
+  height: 20%;
+  padding: auto;
+}
+.grid img {
+  margin-top: 10px;
+  width: 95%;
+  height: 75%;
+}
+.g4 {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+}
+@media (max-width: 1986px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(3, 400px);
+  }
+  .g1 {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+  .g2 {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  .g3 {
+    grid-column: 1/-1;
+    grid-row: 2;
+    object-fit: cover;
+  }
+  .g4 {
+    grid-column: 1/-1;
+    grid-row: 3;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1304px) {
+  .grid-container {
+    grid-template-rows: repeat(4, 500px);
+    grid-template-columns: 500px;
+  }
+  .g1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .g2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .g3 {
+    grid-column: 1;
+    grid-row: 3;
+    object-fit: cover;
+  }
+  .g4 {
+    grid-column: 1;
+    grid-row: 4;
+    object-fit: cover;
+  }
+}
+@media (max-width: 515px) {
+  .grid-container {
+    grid-template-rows: repeat(4, 500px);
+    grid-template-columns:1fr;
+  }
+  .g1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .g2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .g3 {
+    grid-column: 1;
+    grid-row: 3;
+    object-fit: cover;
+  }
+  .g4 {
+    grid-column: 1;
+    grid-row: 4;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width:450px){
+.grid-container {
+    grid-template-rows: repeat(4,400px);
+    grid-template-columns: 1fr;
+}
+.grid{
+  padding:10px;
+}
+.project-tile{
+  font-size:1rem;
+}
+}
+@media (max-width:370px){
+  .title-name{
+    font-size:3.4rem;
+  }
+}
+
+
+
+
+#empty-space1-contact-me-section {
+  height: 123px;
+  background: linear-gradient(#91684ac9,#362214);
+}
+
+#contact-me{
+  padding-top:70px;
+  text-align: center;
+  background-color: #362214;
+  height: 250px;
+  color: #ffffff;
+}
+#contact-me ul {
+  padding: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+li {
+  
+  display:inline-block;
+  padding-inline: 30px;
+}
+
+li i{
+  color: white;
+}
